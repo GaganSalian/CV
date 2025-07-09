@@ -2,29 +2,31 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gagan Salian - Full-Stack Developer Resume</title>
   <style>
-    /* Maintain consistent layout */
     body {
       font-family: Arial, sans-serif;
-      margin: 50px;
-      padding: 0;
-      line-height: 1.6;
-      background-color: #fff;
+      margin: 20mm;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #000;
+      background: #fff;
     }
 
     header {
       text-align: center;
+      margin-bottom: 10px;
     }
 
     h1 {
+      font-size: 20pt;
       margin-bottom: 5px;
     }
 
     p {
-      margin: 5px 0;
+      margin: 3px 0;
     }
 
     a {
@@ -37,53 +39,64 @@
     }
 
     section {
-      margin-top: 20px;
+      margin-top: 10px;
     }
 
     h2 {
-      margin-top: 0px;
-      margin-bottom: 0px;
+      font-size: 14pt;
+      margin-top: 10px;
+      margin-bottom: 5px;
     }
 
     hr {
       border: 1px solid #000;
-      margin-bottom: 1px;
+      margin: 5px 0;
       width: 100%;
     }
 
     ul {
+      margin: 0;
       padding-left: 20px;
     }
 
-    /* Make sure layout looks the same on mobile */
-    @media (max-width: 768px) {
+    li {
+      margin-bottom: 3px;
+    }
+
+    article {
+      margin-bottom: 10px;
+    }
+
+    @page {
+      size: A4;
+      margin: 15mm;
+    }
+
+    @media print {
       body {
-        margin: 20px;
+        width: 210mm;
+        height: 297mm;
+        margin: 0 auto;
+        font-size: 10pt;
       }
 
-      header {
-        text-align: center;
+      header, section, article {
+        page-break-inside: avoid;
       }
 
-      .contact-info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      section {
-        margin-top: 20px;
+      a::after {
+        content: " (" attr(href) ")";
+        font-size: 8pt;
       }
     }
   </style>
 </head>
 
 <body>
-
   <header>
-    <h1 style="margin-top: 10px;">Gagan Salian</h1>
-    <p class="contact-info">
-      Phone: 6361140918 | Email: gagansalian04102005@gmail.com |
+    <h1>Gagan Salian</h1>
+    <p>Phone: 6361140918 | Email: gagansalian04102005@gmail.com</p>
+    <p>
       <a href="https://github.com/GaganSalian">GitHub</a> |
       <a href="https://www.linkedin.com/in/gagan-salian-25314b267/?trk=public-profile-join-page">LinkedIn</a>
     </p>
@@ -95,110 +108,92 @@
   </section>
 
   <section style="margin-top: 10px;">
-    <h2>Education</h2>
-    <hr style="margin-top: 0px;">
-    <h3 style="margin: 0px;">Bachelor of Computer Applications</h3>
-    <p><strong>Institution:</strong> Milagres College, Affiliated to Mangalore University</p>
-    <p><strong>Specialization:</strong> Programming, Web Development</p>
-    <p><strong>Expected Graduation:</strong> 2024</p>
+    <div style="display: flex; justify-content: space-between; gap: 20px;">
+      <div style="flex: 1;">
+        <h2>Education</h2>
+        <hr />
+        <h3 style="margin: 0;">Bachelor of Computer Applications</h3>
+        <p><strong>Institution:</strong> Milagres College, Mangalore University</p>
+        <p><strong>Specialization:</strong> Programming, Web Development</p>
+        <p><strong>Expected Graduation:</strong> 2024</p>
+      </div>
+
+      <div style="flex: 1;">
+        <h2>Technical Skills</h2>
+        <hr />
+        <ul>
+          <li><strong>Languages:</strong> JavaScript, HTML, CSS, Python</li>
+          <li><strong>Frontend:</strong> React.js, Vite, Tailwind CSS, Flexbox, Grid CSS</li>
+          <li><strong>Backend:</strong> Node.js, Express.js</li>
+          <li><strong>Database:</strong> MongoDB (Mongoose)</li>
+          <li><strong>Tools:</strong> Git, npm, Parcel, Vite, Nodemon</li>
+          <li><strong>DevOps:</strong> Git, CD, AWS instances</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-top: 15px;">
+    <h2>Projects</h2>
+    <hr />
+    <div style="display: flex; gap: 20px;">
+      <div style="flex: 1;">
+        <article>
+          <h3><a href="https://swiggy-fire-3lvmr20dv-gagansalians-projects.vercel.app/">Fast-Foods – Swiggy Clone</a></h3>
+          <p><strong>Role:</strong> Full-Stack Developer</p>
+          <p><strong>Stack:</strong> React, Tailwind, Node.js, Express.js, MongoDB</p>
+          <ul>
+            <li>Built responsive UI for restaurant browsing and ordering.</li>
+            <li>Developed backend APIs for menu, cart, and orders.</li>
+            <li>Implemented user authentication and live order updates.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3><a href="https://stream-afhkc9q0i-gagansalians-projects.vercel.app/browser">Netflix GPT</a></h3>
+          <p><strong>Role:</strong> Full-Stack Developer</p>
+          <p><strong>Stack:</strong> React, OpenAI API, Node.js, MongoDB</p>
+          <ul>
+            <li>GPT-based movie recommendations system.</li>
+            <li>Built user-friendly video browsing and search UI.</li>
+            <li>Used backend caching and filtering logic.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div style="flex: 1;">
+        <article>
+          <h3><a href="https://youtube-lite-jet-theta.vercel.app/">YouTube-Lite Clone</a></h3>
+          <p><strong>Role:</strong> Full-Stack Developer</p>
+          <p><strong>Stack:</strong> React, Tailwind CSS, Node.js, Express.js, MongoDB</p>
+          <ul>
+            <li>Developed video streaming with search and filters.</li>
+            <li>Added user profiles and watch history features.</li>
+            <li>Optimized performance with efficient APIs.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3><a href="https://github.com/GaganSalian/devtinder-frontend/tree/main/src">DevTinder – Developer Match App</a></h3>
+          <p><strong>Role:</strong> Backend Developer</p>
+          <p><strong>Stack:</strong> Node.js, Express.js, MongoDB, JWT</p>
+          <ul>
+            <li>Created REST APIs for swiping, matches, and messaging.</li>
+            <li>Implemented JWT-secured authentication system.</li>
+            <li>Used Mongoose indexing for faster DB access.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
   </section>
 
   <section>
-    <h2>Technical Skills</h2>
-    <hr style="margin-top: 0px;">
-    <ul style="margin: 0px;">
-      <li><strong>Languages:</strong> JavaScript, HTML, CSS, Python</li>
-      <li><strong>Frontend:</strong> React.js, Vite, Tailwind CSS, Flexbox, Grid CSS</li>
-      <li><strong>Backend:</strong> Node.js, Express.js</li>
-      <li><strong>Database:</strong> MongoDB (Mongoose)</li>
-      <li><strong>Tools:</strong> Git, npm, Parcel, Vite, Nodemon, Styled Components</li>
-      <li><strong>DevOps:</strong> Git version control, Continuous Deployment,Aws instances (CD)</li>
-    </ul>
+    <h2>Certifications</h2>
+    <hr />
+    <p><strong>NamasteDev Certificate:</strong> <a href="https://namastedev.com/gagansalian04102005/certificates/namaste-react">React.js</a></p>
+    <p><strong>NamasteDev Certificate:</strong> <a href="https://namastedev.com/gagansalian04102005/certificates/namaste-node">Node.js</a></p>
+    <p><strong>Udemy Certificate:</strong> <a href="https://www.linkedin.com/in/gagan-salian-25314b267/overlay/1731209261045/single-media-viewer/?profileId=ACoAAEFWy58BGkz12Ruuz-IP9Xf1I-DSF1jtslE">Web Development</a></p>
   </section>
-
-<section>
-  <h2>Projects</h2>
-  <hr style="margin-top: 0px;">
-
-  <!-- Fast-Foods Project -->
-  <article style="margin-bottom: 20px;">
-    <h3 style="margin-top: 0; margin-bottom: 5px;">
-      <a href="https://swiggy-fire-3lvmr20dv-gagansalians-projects.vercel.app/" style="text-decoration: none;">
-        Fast-Foods – Swiggy-style Food Ordering App
-      </a>
-    </h3>
-    <p><strong>Role:</strong> Full-Stack Developer</p>
-    <p><strong>Stack:</strong> React, Tailwind CSS, Node.js, Express.js, MongoDB, Parcel</p>
-    <ul style="margin-top: 0; padding-left: 20px;">
-      <li>Designed and built a responsive UI for browsing and ordering food from restaurants.</li>
-      <li>Developed backend APIs for menu, cart, and order handling using Express and MongoDB.</li>
-      <li>Implemented user authentication and real-time order processing workflow.</li>
-    </ul>
-    <p><strong>GitHub:</strong> <a href="#">View Code</a></p>
-  </article>
-
-  <!-- Netflix GPT Project -->
-  <article style="margin-bottom: 20px;">
-    <h3 style="margin-top: 0; margin-bottom: 5px;">
-      <a href="https://stream-afhkc9q0i-gagansalians-projects.vercel.app/browser" style="text-decoration: none;">
-        Netflix GPT Platform – AI-Driven Streaming App
-      </a>
-    </h3>
-    <p><strong>Role:</strong> Full-Stack Developer</p>
-    <p><strong>Stack:</strong> React, OpenAI API, Node.js, Express.js, MongoDB</p>
-    <ul style="margin-top: 0; padding-left: 20px;">
-      <li>Integrated GPT-based recommendation system for personalized movie suggestions.</li>
-      <li>Developed a clean, user-friendly video browsing and search UI with filtering capabilities.</li>
-      <li>Implemented backend to fetch, process, and cache data from external APIs for scalability.</li>
-    </ul>
-    <p><strong>GitHub:</strong> <a href="#">View Code</a></p>
-  </article>
-
-  <!-- YouTube-Lite Project -->
-  <article style="margin-bottom: 20px;">
-    <h3 style="margin-top: 0; margin-bottom: 5px;">
-      <a href="https://youtube-lite-jet-theta.vercel.app/" style="text-decoration: none;">
-        YouTube-Lite – Mini YouTube Clone
-      </a>
-    </h3>
-    <p><strong>Role:</strong> Full-Stack Developer</p>
-    <p><strong>Stack:</strong> React, Tailwind CSS, Node.js, Express.js, MongoDB</p>
-    <ul style="margin-top: 0; padding-left: 20px;">
-      <li>Built video streaming, search, and pagination features for an optimized user experience.</li>
-      <li>Implemented user authentication, profiles, and watch history functionalities.</li>
-      <li>Optimized data fetching and performance through efficient API design and MongoDB schemas.</li>
-    </ul>
-    <p><strong>GitHub:</strong> <a href="#">View Code</a></p>
-  </article>
-
-  <!-- DevTinder Project -->
-  <article style="margin-bottom: 20px;">
-    <h3 style="margin-top: 0; margin-bottom: 5px;">
-      <a href="#" style="text-decoration: none;">
-        DevTinder – Developer Matchmaking App
-      </a>
-    </h3>
-    <p><strong>Role:</strong> Backend Developer</p>
-    <p><strong>Stack:</strong> Node.js, Express.js, MongoDB, JWT Authentication</p>
-    <ul style="margin-top: 0; padding-left: 20px;">
-      <li>Developed RESTful APIs for user swiping, matching, and real-time chat features.</li>
-      <li>Implemented secure JWT-based authentication for user sessions and data privacy.</li>
-      <li>Optimized database queries for performance and scalability using proper indexing.</li>
-    </ul>
-    <p><strong>GitHub:</strong> <a href="#">View Code</a></p>
-  </article>
-
-</section>
-
-
-  <section>
-    <h2 style="margin-top: 0px; margin-bottom: 0px;">Certifications</h2>
-    <hr style="margin-top: 0px; margin-bottom: 0px;">
-    <p><strong>NamasteDev Certificate - <a href="https://namastedev.com/gagansalian04102005/certificates/namaste-react">React.js</a></strong></p>
-    <p><strong>Udemy Certificate - <a href="https://www.linkedin.com/in/gagan-salian-25314b267/overlay/1731209261045/single-media-viewer/?profileId=ACoAAEFWy58BGkz12Ruuz-IP9Xf1I-DSF1jtslE">Web Development</a></strong></p>
-     <p><strong>NamasteDev Certificate - <a href="https://namastedev.com/gagansalian04102005/certificates/namaste-node">Node.js</a></strong></p>
-  </section>
-
 </body>
 
 </html>
